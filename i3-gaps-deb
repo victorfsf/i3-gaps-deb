@@ -92,7 +92,7 @@ igd_checkSourcesList()
 {
 	gad_log "Checking sources.list(s) to contain sources (\"weak\")..."
 
-	if ! grep --quiet -r "^ *deb-src.*\(\(debian\)\|\(ubuntu\)\|\(kali\)\|\(ascii\)\|\(beowulf\)\)[/ ].*main" /etc/apt/sources.list*; then
+	if ! grep --quiet -r "^ *deb-src.*\(\(debian\)\|\(ubuntu\)\|\(kali\)\|\(ascii\)\|\(beowulf\)\|\(raspbian\)\)[/ ].*main" /etc/apt/sources.list*; then
 		gad_readAndContinue "Please add necessary \"deb-src\" line(s) to your apt sources (and run an 'apt update')."
 		exit 1
 	fi
